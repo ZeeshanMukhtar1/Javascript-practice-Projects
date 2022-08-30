@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    background-color: #ebebeb;
+}
+p{
+     margin-bottom: 1.5rem;
+     color: grey;
+
+}
+.section-center{
+    width: 90vw;
+    margin: 50px auto 0;
+    max-width: 620px;
+}
+
+.question{
+     background-color: white;
+     border-radius: 0.5rem;
+     box-shadow: rgba(0, 0, 0, 0.9);
+     margin-bottom: 2rem;
+     padding: 1.5rem 1.5rem;
+}
+.question-title{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.question-title p{
+    color: yellowgreen;
+    font-weight: bolder;
+}
+.question-btn{
+     font-size: 1.5rem;
+     background: transparent;
+     border-color: transparent;
+     cursor: pointer;
+     color: yellowgreen;
+}
+.question-text{
+     border-top: 1px solid grey;
+     padding: 1rem 0 1.5rem 0 ;
+     /* classes for js  */
+     display: none;
+
+}
+.minus-icon{
+     display: none;
+}
+ /*  adding a JS class which enables us to see a minus icon and a paragraph */
+
+.show-text .question-text{
+display: block;
+
+}
+.show-text .minus-icon{
+     display: inline;
+}
+.show-text .plus-icon{
+     display: none;
+}
