@@ -1,0 +1,66 @@
+body {
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     height: 100vh;
+     align-items: center;
+     transition: .4s;
+   }
+   
+   .input {
+     visibility: hidden;
+   }
+   
+   .label {
+     position: absolute;
+     /* WRT Body */
+     width: 80px;
+     height: 40px;
+     background-color: lightgray;
+     border-radius: 20px;
+     cursor: pointer;
+   }
+   
+   .circle {
+     width: 34px;
+     height: 34px;
+     /* reason of chossing 34px is because of we gave 40px height  to the label , 40-6 = 34px , 6px for top circle , 6px for bottom , to place an item in exact center  */
+     background-color: white;
+     border-radius: 50%;
+     top: 3px;
+     position: absolute;
+     left: 3px;
+     animation: toggleOff 0.4s linear forwards;
+   }
+   
+   .input:checked + .label {
+     background-color: white;
+   }
+   
+   .input:checked + .label .circle {
+     /* if input is checked then do this action */
+     /* input checked is a condition */
+     /* + .label is an action */
+     animation: toggleOn 0.4s linear forwards;
+     background-color: black;
+   }
+   
+
+   /*  Adding an Animation to the chekbox */
+   @keyframes toggleOn {
+     0% {
+       transform: translateX(0);
+     }
+     100% {
+       transform: translateX(40px);
+     }
+   }
+   
+   @keyframes toggleOff {
+     0% {
+       transform: translateX(40px);
+     }
+     100% {
+       transform: translateX(0);
+     }
+   }
